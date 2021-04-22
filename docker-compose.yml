@@ -10,3 +10,4 @@ services:
     restart: always
     volumes:
      - ./data/conf:/etc/openvpn
+     - .ovpn_env.sh:/etc/openvpn/ovpn_env.sh
