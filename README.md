@@ -17,9 +17,9 @@
  - Create a client with no passphrase
  `docker-compose run --rm openvpn easyrsa build-client-full $CLIENT_NAME nopass`
  - Retrive client configuration file
- `docker-compose run --rm openvpn ovpn_getclient $CLIENTNAME > $CLIENT_NAME.ovpn`
+ `docker-compose run --rm openvpn ovpn_getclient $CLIENT_NAME > $CLIENT_NAME.ovpn`
  - After this step, you can use this file to connect to this OpenVPN instance.
 
 ### To revoke an existing client
 - Remove all cert, issued key and everything belong to that client
-`docker-compose run --rm openvpn ovpn_revokeclient $CLIENTNAME remove`
+`docker-compose run --rm openvpn ovpn_revokeclient $CLIENT_NAME remove`
